@@ -1,0 +1,64 @@
+/* src/components/SocialMediaIcons.css */
+
+.social-icons {
+  position: fixed;
+  top: 40%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 100;
+}
+
+.social-icon {
+  margin-bottom: 10px;
+  font-size: 2rem; /* Larger icon size */
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease, margin-right 0.3s ease;
+  transform: translateX(50px); /* Start off-screen */
+  opacity: 0; /* Initially hidden */
+}
+
+.social-icon:nth-child(1) {
+  animation: slide-in 0.5s forwards 0.3s ease; /* Delayed slide-in animation */
+}
+
+.social-icon:nth-child(2) {
+  animation: slide-in 0.5s forwards 0.4s ease; /* Delayed slide-in animation */
+}
+
+.social-icon:nth-child(3) {
+  animation: slide-in 0.5s forwards 0.5s ease; /* Delayed slide-in animation */
+}
+
+.social-icon:nth-child(4) {
+  animation: slide-in 0.5s forwards 0.6s ease; /* Delayed slide-in animation */
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.social-icon:hover {
+  transform: translateX(40px); /* Slight movement on hover */
+}
+
+.social-icon svg {
+  transition: fill 0.3s ease, background-color 0.3s ease; /* Smooth color transition */
+}
+
+.social-icon:hover svg {
+  fill: #0c6d70; /* Change icon color on hover */
+  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background on hover */
+  border-radius: 50%; /* Make the background circular */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 5px; /* Add some padding to create space around the icon */
+}

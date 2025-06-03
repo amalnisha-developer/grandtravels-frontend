@@ -1,0 +1,151 @@
+.service-content {
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.service-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.service-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    background: rgba(42, 116, 112, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+    display: flex; /* Ensure flex layout for image and content */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+    transition: transform 0.3s ease; /* Add transition for transform */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    margin-bottom: 10px;
+}
+
+.service-card button {
+    background-color: #0c6d70;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensure button is visible */
+}
+
+.service-card button:hover {
+    background-color: #094c4e;
+}
+
+.service-card img {
+    width: 100%; /* Ensure image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Match card border radius */
+    margin-bottom: 10px; /* Add spacing between image and text */
+}
+
+.service-points {
+    margin-top: 50px;
+    max-height: 200px; /* Limit height */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Keep list items in a single line */
+    display: flex; /* Ensure flex layout */
+    justify-content: flex-start; /* Start from the left */
+}
+
+.goals-carousel {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    padding: 20px 0; /* Add padding */
+}
+
+.goals-list {
+    display: flex; /* Ensure flex layout */
+    gap: 20px; /* Add spacing between items */
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+}
+
+.goal-card {
+    flex: 0 0 auto; /* Disable flex grow and shrink */
+    width: 300px; /* Set fixed width for each card */
+    background: rgba(0, 0, 0, 0.7); /* Card background */
+    padding: 20px; /* Card padding */
+    border-radius: 8px; /* Card border radius */
+    text-align: left; /* Left-align text */
+    transition: transform 0.3s ease; /* Add transition for transform */
+}
+
+.goal-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+}
+
+.goal-card img {
+    width: 100%; /* Ensure image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Match card border radius */
+    margin-bottom: 10px; /* Add spacing between image and text */
+}
+
+.service-points h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Service Page styles */
+.service-page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.additional-content {
+    margin-top: 40px;
+    /* Additional styles for other content on the service page */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .service-card {
+        width: 100%; /* Make cards full-width on mobile */
+    }
+
+    .service-card img {
+        margin-bottom: 15px; /* Increase space for smaller screens */
+    }
+
+    .service-card button {
+        width: 100%; /* Make button full-width on mobile */
+        padding: 15px; /* Increase padding for better touch targets */
+    }
+
+    .service-title {
+        font-size: 2rem; /* Adjust title size for mobile */
+    }
+
+    .service-points {
+        flex-direction: column; /* Stack points vertically on mobile */
+        max-height: none; /* Remove height restriction */
+        overflow-x: hidden; /* Disable horizontal scrolling */
+    }
+}

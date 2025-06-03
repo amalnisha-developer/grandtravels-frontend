@@ -1,0 +1,58 @@
+.tour {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .tour h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #2a2a2a;
+
+  }
+
+  .tour-card p{
+    color: black;
+  }
+  
+  .tour-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .tour-card {
+    flex: 0 0 auto;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    scroll-snap-align: start;
+  }
+  
+  .tour-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .tour-card h4 {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .tour-card p {
+    margin: 0 10px 10px;
+    color: #555;
+  }
+  
+  .tour-cards::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tour-cards {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  

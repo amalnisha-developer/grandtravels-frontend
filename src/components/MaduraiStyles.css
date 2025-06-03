@@ -1,0 +1,110 @@
+/* src/pages/MaduraiStyles.css */
+
+.madurai-page {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.madurai-page h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #fff; /* White text color for contrast */
+  background-color: #0C6D70; /* Use the specified color for background */
+  padding: 10px 20px; /* Padding to ensure text is comfortably spaced */
+  display: inline-block; /* Ensures the background color covers the entire width of the text */
+  border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+.madurai-page p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.madurai-page h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2a2a2a;
+}
+
+.place {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(50% - 20px); /* Two columns per row on larger screens */
+  max-width: 500px; /* Maximum width */
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row; /* Ensure horizontal layout for larger screens */
+}
+
+.place:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.place img {
+  width: 200px; /* Increased image size */
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.place:hover img {
+  transform: scale(1.1);
+}
+
+.place-info {
+  flex: 1;
+}
+
+.place-info h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.place-info p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .madurai-page h1 {
+    font-size: 2em; /* Adjust heading size for mobile screens */
+  }
+
+  .place {
+    width: calc(100% - 20px); /* Full width on smaller screens */
+    max-width: 100%; /* Ensure full width on smaller screens */
+    margin-bottom: 20px;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: left; /* Align content to the left on smaller screens */
+  }
+
+  .place img {
+    width: 100%; /* Adjust image to full width of container */
+    margin-right: 0;
+    margin-bottom: 15px; /* Add spacing between image and text */
+  }
+}
+
+@media (min-width: 1200px) {
+  .place {
+    width: calc(100% - 40px); /* Increase size for larger screens */
+    max-width: 1200px; /* Increased max-width for larger screens */
+  }
+
+  .place:nth-child(even) {
+    flex-direction: row-reverse; /* Flip the layout for even elements */
+  }
+
+  .place img {
+    width: 300px; /* Increased image size for larger screens */
+  }
+}

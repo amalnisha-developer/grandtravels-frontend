@@ -1,0 +1,214 @@
+/* src/components/Trip.css */
+
+.trip {
+    margin: 4rem 4rem;
+    color: #2a2a2a;
+}
+
+.trip h1 {
+    font-size: 3rem;
+    color: #2a2a2a;
+}
+
+.tripcard {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.t-card {
+    width: 90%;
+    text-align: start;
+    box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.11);
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 1rem .8rem;
+}
+
+.t-image {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.t-image img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.t-image:hover img {
+    transform: scale(1.3);
+}
+
+.t-card h4 {
+    align-items: center;
+    font-size: 1.3rem;
+    padding: .9rem 0.2rem 0;
+    color: black; /* Set heading (h4) color to black */
+}
+
+.t-card p {
+    color: #2a2a2a; /* Set paragraph (p) color to #2a2a2a */
+}
+
+.t-card a {
+    text-decoration: none; /* Remove underline from links within .t-card */
+}
+
+.trip-link {
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Responsive Design for Places */
+
+@media screen and (max-width: 1200px) {
+    .trip {
+        margin: 4rem 4rem;
+    }
+    
+    .t-card {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .trip {
+        margin: 4rem 3rem;
+    }
+    
+    .t-card {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .trip {
+        margin: 4rem 2rem;
+    }
+    
+    .tripcard {
+        flex-direction: column;
+        align-items: center; /* Center align cards in column layout */
+    }
+    
+    .t-card {
+        width: 100%; /* Adjust width to maintain consistency */
+        max-width: 500px; /* Set a maximum width for the card */
+        margin-bottom: 1.5rem;
+    }
+    
+    .t-image {
+        height: 250px; /* Increase the image height for smaller tablets */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .trip {
+        margin: 2rem 1rem;
+    }
+    
+    .t-card {
+        width: 100%; /* Adjust width to maintain consistency */
+        max-width: 100%; /* Set the maximum width to full width */
+        margin-bottom: 1.5rem;
+    }
+    
+    .t-image {
+        height: 300px; /* Increase the image height for mobile view */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .trip {
+        margin: 1rem 0.5rem;
+    }
+    
+    .t-card {
+        padding: 0.8rem 0.5rem; /* Adjust padding for very small screens */
+    }
+    
+    .t-image {
+        height: 250px; /* Adjust image height for very small screens */
+    }
+}
+
+/* Styles for Places */
+.place {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(50% - 20px); /* Two columns per row on larger screens */
+    max-width: 500px; /* Maximum width */
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row; /* Ensure horizontal layout for larger screens */
+}
+
+.place:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.place img {
+    width: 200px; /* Increased image size */
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.place:hover img {
+    transform: scale(1.1);
+}
+
+.place-info {
+    flex: 1;
+}
+
+.place-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.place-info p {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .place {
+        width: calc(100% - 20px); /* Full width on smaller screens */
+        max-width: 100%; /* Ensure full width on smaller screens */
+        margin-bottom: 20px;
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: left; /* Align content to the left on smaller screens */
+    }
+
+    .place img {
+        width: 100%; /* Adjust image to full width of container */
+        margin-right: 0;
+        margin-bottom: 15px; /* Add spacing between image and text */
+    }
+}
+
+@media (min-width: 1200px) {
+    .place {
+        width: calc(100% - 40px); /* Increase size for larger screens */
+        max-width: 1800px; /* Increased max-width for larger screens */
+    }
+
+    .place:nth-child(even) {
+        flex-direction: row-reverse; /* Flip the layout for even elements */
+    }
+
+    .place img {
+        width: 600px; /* Increased image size for larger screens */
+    }
+}
