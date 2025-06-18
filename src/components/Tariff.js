@@ -6,6 +6,7 @@ import etiosImg from '../assets/etios.png';
 import suvImg from '../assets/suv.png';
 import innovaImg from '../assets/innova.png';
 import crystaImg from '../assets/crysta.png';
+import tempoImg from '../assets/tempo.png';
 
 const Tariff = () => {
   const whatsappNumber = '7598283292';
@@ -89,7 +90,20 @@ const Tariff = () => {
       kmFare: "₹24/km",
       driverBatta: "₹500",
       belowKM: 350,
-    }
+    },
+{
+  title: "Tempo Traveller",
+  subtitle: "(Assured Tempo Traveller)",
+  img: tempoImg, // Replace with correct image import for Tempo Traveller
+  ac: "A/C",
+  seats: "12 Seats",
+  bags: "10 Bags",
+  dayRent: "₹2600",
+  fuelCharge: "₹18/km",
+  kmFare: "₹25/km",
+  belowKM: 350
+}
+
   ];
 
   return (
