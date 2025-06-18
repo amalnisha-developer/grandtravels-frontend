@@ -101,7 +101,9 @@ const Tariff = () => {
   dayRent: "₹2600",
   fuelCharge: "₹18/km",
   kmFare: "₹25/km",
-  belowKM: 350
+  belowKM: 350,
+  driverBatta: "₹500",
+
 }
 
   ];
