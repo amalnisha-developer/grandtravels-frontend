@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import HeroImg from '../assets/homo.avif';
 import Destination from '../components/Destination';
 import Trip from './Trip';
+// import gttImg from "../assets/gtt.png" 
+
 import Tour from '../components/Tour';
 import MostVisitedPlaces from '../components/MostVisitedPlaces';
 import CustomerReviewComponent from '../components/CustomerReviewComponent';
@@ -17,6 +19,7 @@ const Home = () => {
 <Hero
   cName="hero"
   heroImg={HeroImg}
+  // gttImg={gttImg}
   title="Explore and Enjoy Your Trips"
   text="Discover amazing destinations with Grand Tours and Travels."
   buttons={[
