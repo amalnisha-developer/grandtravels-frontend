@@ -1,0 +1,76 @@
+.tariff-section {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.tariff-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.tariff-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tariff-card {
+  background: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tariff-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.tariff-card h3 {
+  color: #002060;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.features span {
+  margin: 5px;
+  display: inline-block;
+}
+
+.rate-table {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.rate-header {
+  font-weight: bold;
+  color: #c00;
+  margin-top: 10px;
+}
+
+.rate-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.book-now-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

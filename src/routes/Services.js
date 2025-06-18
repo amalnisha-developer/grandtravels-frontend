@@ -2,8 +2,9 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Service from '../assets/homo.avif';
 import Footer from '../components/Footer';
-import ServiceContent from '../components/ServiceContent';
+// import ServiceContent from '../components/ServiceContent';
 import OurGoalsComponent from '../components/OurGoalsComponent';
+import Tariff from '../components/Tariff';
 
 const Services = () => {
   
@@ -15,10 +16,10 @@ const Services = () => {
         cName="hero-mid"
         heroImg={Service} 
         title="Our Services"
-        text="Welcome to our service page where we offer various travel packages tailored to your needs.
-"
+        text="Welcome to our service page where we offer various travel packages tailored to your needs."
       />
-      <ServiceContent/>
+      {/* <ServiceContent/> */}
+      <Tariff/>
       <OurGoalsComponent />
 
       <Footer />

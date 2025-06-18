@@ -1,29 +1,77 @@
 import React from 'react';
-import './AboutUsStyles.css'; // Assuming it's a CSS file
+import './AboutUsStyles.css';
 
 const AboutUs = () => {
-    // Define your vision and mission statements
-    const visionStatement = "To be the leading provider of unforgettable travel experiences, enriching lives globally.";
-    const missionStatement = "Our mission is to create lasting memories for our customers by offering exceptional travel services with a focus on quality, affordability, and customer satisfaction.";
+  const visionStatement = "To be the leading provider of unforgettable travel experiences, enriching lives globally.";
+  const missionStatement = "Our mission is to create lasting memories for our customers by offering exceptional travel services with a focus on quality, affordability, and customer satisfaction.";
+  const whyChoose = "At Grand Tours and Travels, we believe that our vision reflects our commitment to excellence and innovation in the travel industry.";
 
-    // Paragraph explaining the reason for including the vision statement
-    const whyChoose = "At Grand Tours and Travels, we believe that our vision statement reflects our commitment to excellence and innovation in the travel industry. By aspiring to be the leading provider of unforgettable travel experiences, we aim to set new standards and inspire travelers worldwide.";
+  const destinations = [
+    "Madurai – The Temple City",
+    "Rameshwaram – Pilgrimage by the Sea",
+    "Kanyakumari – The Southern Tip of India",
+    "Kodaikanal – The Princess of Hill Stations",
+    "Tirupati – Divine Blessings & Serenity",
+    "Trivandrum – Tradition Meets Tranquility",
+    "Munnar – Misty Mountains & Tea Gardens",
+    "Thekkady – Wild Forests and Calm Lakes",
+    "Kochi – Culture, Forts & Sea Breeze",
+    "Alleppey – Cruise the Backwaters in Style",
+  ];
 
-    return (
-        <div className='about-container'>
-            <h1>Our History</h1>
-            <p>We started Grand Tours and Travels in 2020 with friends who shared a passion for travel. Over the past four years, we have been successfully operating our travel business, offering affordable prices, ensuring customer satisfaction, and prioritizing customer comfort. These principles have been instrumental in our journey towards becoming a trusted name in travel services.</p>
-            
-            <h2>Why Choose Us?</h2>
-            <p>{whyChoose}</p>
+  const features = [
+    "Clean, AC & well-maintained vehicles",
+    "Professional and courteous drivers",
+    "24/7 booking and customer support",
+    "Affordable pricing with transparent service"
+  ];
 
-            <h2>Our Vision</h2>
-            <p>{visionStatement}</p>
+  return (
+    <div className="about-container">
+      <section className="history-section">
+        <h1>Our Story</h1>
+        <p>
+          At The GRAND Tours and Travels, we believe every journey should be smooth, comfortable, and unforgettable.
+          Based in Madurai, we are one of South India's most trusted tour and travel service providers. With four years of experience and thousands of happy customers,
+          we specialize in offering reliable cab services and customized tour packages across South India.
+        </p>
+        <p>
+          Whether you're planning a spiritual pilgrimage, a family vacation, or a romantic hill station retreat —
+          our team ensures you enjoy every mile of the journey.
+        </p>
+      </section>
 
-            <h2>Our Mission</h2>
-            <p>{missionStatement}</p>
+      <section className="highlight-section">
+        <h2>Why Choose Us?</h2>
+        <p>{whyChoose}</p>
+        <ul>
+          {features.map((item, index) => (
+            <li key={index}>✅ {item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="vision-mission-section">
+        <div className="vm-box">
+          <h2>Our Vision</h2>
+          <p>{visionStatement}</p>
         </div>
-    );
-}
+        <div className="vm-box">
+          <h2>Our Mission</h2>
+          <p>{missionStatement}</p>
+        </div>
+      </section>
+
+      <section className="destination-section">
+        <h2>🌍 Our Popular Tour Destinations</h2>
+        <ul>
+          {destinations.map((place, index) => (
+            <li key={index}>📍 {place}</li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  );
+};
 
 export default AboutUs;

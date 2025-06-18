@@ -53,13 +53,14 @@
   text-decoration: none;
   background-color: #0095AF;
   padding: 1rem 2rem;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 1.1rem;
+  margin: 40px;
   font-weight: bold;
   letter-spacing: 2px;
   color: #fff; /* Changed to white for better contrast */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
-  animation: bounce 2s infinite, pulse 2s infinite; /* Added bounce and pulse animations */
+  animation:  pulse 2s infinite; /* Added bounce and pulse animations */
 }
 
 .hero-text .show:hover {
@@ -110,6 +111,7 @@
   .hero-text .show {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
+   
   }
 }
 
@@ -135,5 +137,41 @@
   .hero-text .show {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
+
+  }
+}
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.hero-text .show {
+  text-decoration: none;
+  background-color: #0095AF;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* animation: bounce 2s infinite, pulse 2s infinite; */
+  text-align: center;
+}
+
+/* ✅ Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text .show {
+    width: 50%;
+    font-size: 1rem;
+    margin: 5px 0;
   }
 }

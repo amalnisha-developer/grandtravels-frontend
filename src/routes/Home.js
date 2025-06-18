@@ -10,19 +10,23 @@ import CustomerReviewComponent from '../components/CustomerReviewComponent';
 import Footer from '../components/Footer';
 
 const Home = () => {
+
   return (
     <>
-      
-      <Navbar />
-      <Hero
-        cName="hero"
-        heroImg={HeroImg}
-        title="Explore and Enjoy Your Trips"
-        text="Discover amazing destinations with Grand Tours and Travels."
-        buttonText="Travel Package"
-        url="/"
-        btnClass="show"
-      />
+<Navbar />
+<Hero
+  cName="hero"
+  heroImg={HeroImg}
+  title="Explore and Enjoy Your Trips"
+  text="Discover amazing destinations with Grand Tours and Travels."
+  buttons={[
+    { type: 'tel', label: 'Call Us', href: 'tel:7598283292' },
+    { type: 'link', label: 'View Packages', to: '/travel-plan' },
+    { type: 'whatsapp', label: 'WhatsApp Us', href: 'https://wa.me/7598283292' }
+  ]}
+  btnClass="show"
+/>
+
       <Destination />
       <Trip />
       <Tour />
