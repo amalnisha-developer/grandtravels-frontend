@@ -27,6 +27,20 @@
     border: 1px solid #2a2a2a;
 
 }
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.button-wrapper button {
+  background-color: black;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
 .form-container button{
     color: white;
@@ -39,6 +53,16 @@
     background-color: rgb(24, 23, 23);
 
 }
+.form-container input,
+.form-container select,
+.form-container textarea {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid #2a2a2a;
+  font-size: 1rem;
+}
+
 
 @media screen and (max-width:850px) {
     .form-container {
@@ -51,4 +75,28 @@
     }
     
     
+}
+.form-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 50%;
+  margin: auto;
+  max-height: 100vh;
+  overflow-y: visible;
+}
+
+/* Make some fields full width */
+.form-container .full-width {
+  grid-column: 1 / -1;
+}
+
+/* Responsive: switch to single column and scroll on small screens */
+@media screen and (max-width: 850px) {
+  .form-container form {
+    grid-template-columns: 1fr;
+    width: 100%;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+  }
 }

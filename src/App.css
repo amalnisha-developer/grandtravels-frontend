@@ -6,6 +6,12 @@
 
 }
 
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+
 .App {
   font-family: "Poppins", sans-serif;
   text-align: center;

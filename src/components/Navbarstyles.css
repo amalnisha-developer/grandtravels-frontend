@@ -10,6 +10,7 @@
   height: 80px;
   margin: 0;
   position: sticky;
+  position: fixed;
   top: 0; /* This makes the navbar sticky */
   z-index: 100;
   transition: background-color 0.3s ease, padding 0.3s ease;
