@@ -19,7 +19,6 @@ const Home = () => {
 <Hero
   cName="hero"
   heroImg={HeroImg}
-  // gttImg={gttImg}
   title="Explore and Enjoy Your Trips"
   text="Discover amazing destinations with Grand Tours and Travels."
   buttons={[

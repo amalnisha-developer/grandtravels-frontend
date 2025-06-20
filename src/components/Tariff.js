@@ -91,21 +91,19 @@ const Tariff = () => {
       driverBatta: "₹500",
       belowKM: 350,
     },
-{
-  title: "Tempo Traveller",
-  subtitle: "(Assured Tempo Traveller)",
-  img: tempoImg, // Replace with correct image import for Tempo Traveller
-  ac: "A/C",
-  seats: "12 Seats",
-  bags: "10 Bags",
-  dayRent: "₹2600",
-  fuelCharge: "₹18/km",
-  kmFare: "₹25/km",
-  belowKM: 350,
-  driverBatta: "₹500",
-
-}
-
+    {
+      title: "Tempo Traveller",
+      subtitle: "(Assured Tempo Traveller)",
+      img: tempoImg,
+      ac: "A/C",
+      seats: "12 Seats",
+      bags: "10 Bags",
+      dayRent: "₹2600",
+      fuelCharge: "₹18/km",
+      kmFare: "₹25/km",
+      belowKM: 350,
+      driverBatta: "₹500",
+    }
   ];
 
   return (
@@ -113,29 +111,36 @@ const Tariff = () => {
       <h2 className="tariff-title">Our Tariff</h2>
       <div className="tariff-wrapper">
         {cars.map((car, index) => (
-          <div className="tariff-card" key={index}>
-            <img src={car.img} alt={car.title} />
-            <h3>{car.title}</h3>
-            <p className="subtitle">{car.subtitle}</p>
-            <div className="features">
-              <span>❄️ {car.ac}</span>
-              <span>🪑 {car.seats}</span>
-              <span>🧳 {car.bags}</span>
-            </div>
+         <div className="tariff-card" key={index}>
+  <div className="tariff-content">
+    <img src={car.img} alt={car.title} />
+    <h3>{car.title}</h3>
+    <p className="subtitle">{car.subtitle}</p>
+    <div className="features">
+      <span>❄️ {car.ac}</span>
+      <span>🪑 {car.seats}</span>
+      <span>🧳 {car.bags}</span>
+    </div>
 
-            <div className="rate-table">
-              <div className="rate-header">For below {car.belowKM} KM</div>
-              <div className="rate-row">Day Rental <span>{car.dayRent}</span></div>
-              <div className="rate-row">Fuel Charge <span>{car.fuelCharge}</span></div>
-              <div className="rate-header">For above {car.belowKM} km</div>
-              <div className="rate-row">KM Fare <span>{car.kmFare}</span></div>
-              <div className="rate-row">Driver Batta <span>{car.driverBatta}</span></div>
-            </div>
+    <div className="rate-table">
+      <div className="rate-header">For below {car.belowKM} KM</div>
+      <div className="rate-row">Day Rental <span>{car.dayRent}</span></div>
+      <div className="rate-row">Fuel Charge <span>{car.fuelCharge}</span></div>
+      <div className="rate-header">For above {car.belowKM} km</div>
+      <div className="rate-row">KM Fare <span>{car.kmFare}</span></div>
+      <div className="rate-row">Driver Batta <span>{car.driverBatta}</span></div>
+    </div>
+  </div>
 
-            <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
-              <button className="book-now-btn">Book Now</button>
-            </a>
-          </div>
+  {/* Always visible button */}
+  <div className="button-wrapper full-width" style={{marginTop:"20px"}}>
+           <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
+    <button className="button-wrapper full-width" >Book Now</button>
+  </a>
+        </div>
+ 
+</div>
+
         ))}
       </div>
     </section>

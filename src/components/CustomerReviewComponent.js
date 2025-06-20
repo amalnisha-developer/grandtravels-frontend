@@ -97,7 +97,7 @@ const CustomerReviewComponent = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          View More Reviews on Google
+          Click here to View More Reviews on Google
         </a>
       </div>
     </div>
